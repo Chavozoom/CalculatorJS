@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Button from "./Button";
+import Operator from "./Operators"
 
 var numbers = (''+Array(10)).split(',').map(function(){return this[0]++;}, [0]).reverse();
-
+const operators = ["*", "/", "-", "+"];
 
 const Calculator = () => {
-    const [formula, setFormula] = useState("");
+    const [formula, setFormula] = useState([]);
 
     const addNumber = (number) =>{
+        
     setFormula((prevItems) => {
         return [...prevItems, number];
       });
@@ -17,7 +19,8 @@ const Calculator = () => {
     <div >
         <table>
         <tr>
-            <td colspan="3"><input type="text" id="result" value={formula}/></td>
+            {console.log(formula)}
+            <td colspan="3"><input type="text" value={formula.join("")}/></td>
             <td><input type="button" value="c" onclick="clr()" /> </td>
 
 
@@ -26,10 +29,18 @@ const Calculator = () => {
         number =  {number}
         addNumber = {addNumber}
         />
-      )}
+    )}
+    {operators.map((operator) =>
+    <Operator 
+    addNumber = {addNumber}
+    operator = {operator}
+    />
+    )}
         </tr>
         </table>
+
     </div>
+
   );
 }
 

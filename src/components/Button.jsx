@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 
 
-const App = (props) => {
+const Button = (props) => {
 
   return (
     <div >
@@ -11,4 +11,4 @@ const App = (props) => {
   );
 }
 
-export default App;
+export default Button;
