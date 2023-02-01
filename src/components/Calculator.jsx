@@ -34,6 +34,7 @@ const Calculator = () => {
     <Operator 
     addNumber = {addNumber}
     operator = {operator}
+    formula = {formula}
     />
     )}
         </tr>
