@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Calculator from './Calculator';
 
 
 const App = () => {
-    const [formula, setFormula] = useState([]);
 
   return (
     <div >

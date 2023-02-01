@@ -6,7 +6,7 @@ const App = (props) => {
 
   return (
     <div >
-         <td><input type="button" value={props.number} onclick="dis('1')" ></input></td>
+         <td><input type="button" value={props.number}  onClick={() => {props.addNumber(props.number)}} ></input></td>
     </div>
   );
 }
