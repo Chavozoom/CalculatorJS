@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import Calculator from './Calculator';
 
-
-const number = Math.random();
 
 const App = () => {
+    const [formula, setFormula] = useState([]);
+
   return (
     <div >
-      <h1>{number}</h1>
+        <Calculator />
     </div>
   );
 }
