@@ -3,7 +3,7 @@ import Number from "./Numbers";
 import Operator from "./Operators"
 
 var numbers = (''+Array(10)).split(',').map(function(){return this[0]++;}, [0]).reverse();
-const operators = ["*", "/", "-", "+"];
+const operators = ["*", "/", "-", "+", "^"];
 
 const Calculator = () => {
     const [formula, setFormula] = useState([]);
@@ -23,20 +23,29 @@ const Calculator = () => {
       setFormula([]);
     }
 
+    const clear = () =>{
+      setShowResult(false);
+      setFormula([]);
+    }
+
   return (
-  <table>
+  <table className='container'>
     <tr>
             <td colspan="3"><input type="text" value={showResult ? result : formula.join("")}/></td>
-            <td><input type="button" value="C" onclick="clr()" /> </td>
+            <button className='clear' type="button" value="C" onClick={() => clear()} >Clear</button>
     </tr>
-        {numbers.map((number) =>
+    <div className='numbers'>
+        {numbers.map((number, i) =>
         <Number 
+        key = {i}
         number =  {number}
         addNumber = {addNumber}
         />
         )}
-        {operators.map((operator) =>
-        <Operator 
+      </div>
+        {operators.map((operator, i) =>
+        <Operator
+        key = {i} 
         addNumber = {addNumber}
        operator = {operator}
        formula = {formula}

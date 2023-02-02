@@ -4,7 +4,7 @@ const Button = (props) => {
 
   return (
     <div >
-         <td><input type="button" value={props.number}  onClick={() => {props.addNumber(props.number)}} ></input></td>
+         <td><input className='num' type="button" value={props.number}  onClick={() => {props.addNumber(props.number)}} ></input></td>
     </div>
   );
 }
