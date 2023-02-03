@@ -3,7 +3,7 @@ import Number from "./Numbers";
 import Operator from "./Operators"
 
 var numbers = (''+Array(10)).split(',').map(function(){return this[0]++;}, [0]).reverse();
-const operators = ["*", "/", "-", "+", "^"];
+const operators = ["*", "/", "-", "+"];
 
 const Calculator = () => {
     const [formula, setFormula] = useState([]);
@@ -29,14 +29,15 @@ const Calculator = () => {
     }
 
   return (
-  <table className='container'>
-    <tr>
-            <td colspan="3"><input type="text" value={showResult ? result : formula.join("")}/></td>
-            <button className='clear' type="button" value="C" onClick={() => clear()} >Clear</button>
-    </tr>
+  <div className='container'>
+    <div className='result'>
+            <input type="text" value={showResult ? result : formula.join("")}/>
+            <button className='clear' type="button" value="C" onClick={() => clear()} >C</button>
+    </div>
     <div className='numbers'>
         {numbers.map((number, i) =>
         <Number 
+        index = {i}
         key = {i}
         number =  {number}
         addNumber = {addNumber}
@@ -51,8 +52,8 @@ const Calculator = () => {
        formula = {formula}
         />
         )}
-    <button type="button" value="=" onClick={() => calc(formula)} >=</button>
-  </table>
+    <button className='lastOne' type="button" value="=" onClick={() => calc(formula)} >=</button>
+  </div>
   );
 }
 

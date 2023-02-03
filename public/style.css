@@ -9,15 +9,87 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: #202020;
+    background-color:#03C988;
   }
   .container {
     position: relative;
-    min-width: 300px;
-    min-height: 400px;
+    width: 480px;
+    height: 550px;
     padding: 40px 30px 30px;
     border-radius: 20px;
-    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
-      10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.25),
-      inset 5px 5px 15px rgba(0, 0, 0, 0.25);
+    background-color: #567189;
+  }
+  .first, .second, .third{
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #E5E0FF;
+    border: 1px solid black;
+    margin: 2.5%;
+    padding: 25px 40px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    top: -100px;
+    right: 10px;
+  }
+  .lastOne0{
+    font-size: 25px;
+    font-weight: bolder;
+    align-items: center;
+    position: relative;
+    top: -90px;
+    right: -2px;
+    padding: 30px 90px;
+    border-radius: 20px;
+    background-color: #E5E0FF;
+    border: 1px solid black;
+  }
+  .lastOne{
+    font-size: 25px;
+    font-weight: bolder;
+    align-items: center;
+    position: relative;
+    top: -465px;
+    right: -215px;
+    padding: 30px 100px;
+    border-radius: 20px;
+    background-color: yellow;
+    border: 1px solid black;
+  }
+  .operators{
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 3%;
+    align-items: center;
+    position: relative;
+    top: -485px;
+    right: -350px;
+    padding: 18.5px 30px;
+    border-radius: 20px;
+    background-color: #39B5E0;
+    border: 1px solid black;
+  }
+  .result{
+    width: 100%;
+  }
+  .result input{
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 7% 2.5%;
+    position: relative;
+    top: -20px;
+    background-color: #7286D3;
+    border-radius: 20px;
+  }
+  .result .clear{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 20px;
+    background-color: #1C82AD;
+    padding: 7% 40px;
+    position: relative;
+    top: -110px;
+    right: -320px;
+    border-radius: 20px;
+    border: 1px solid black;
   }

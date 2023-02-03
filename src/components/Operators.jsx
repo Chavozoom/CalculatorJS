@@ -1,6 +1,6 @@
 import React from 'react';
 
-const operators = ["*", "/", "-", "+", "^"];
+const operators = ["*", "/", "-", "+"];
 
 const Button = (props) => {
 
@@ -13,7 +13,7 @@ const Button = (props) => {
 
   return (
     <div >
-         <td><input className='button' type="button" value={props.operator}  onClick={() => isOperatorBefore() } ></input></td>
+         <td><input className='operators' type="button" value={props.operator}  onClick={() => isOperatorBefore() } ></input></td>
     </div>
   );
 }
